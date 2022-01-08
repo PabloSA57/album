@@ -1,0 +1,50 @@
+.con{
+    background-color: #070707;
+    
+}
+
+.con img {
+    width: 100%;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.btnd{
+    background-color: #f04393;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 17px;
+}
+
+@media (min-width: 800px) {
+
+    .con{
+        height: auto;
+        width: 100%;
+    }
+
+    .con img{
+        width: 100%;
+        height: 100%;
+    }
+    .all {
+        display:flex;
+        flex-direction: row;
+
+        
+    }
+
+    .all .div1{
+        width: 50%;
+    }
+    .all .div2{
+        width: 50%;
+    }
+  }

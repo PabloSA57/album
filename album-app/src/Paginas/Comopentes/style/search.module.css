@@ -1,0 +1,32 @@
+.con{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.con input{
+    height: 25px;
+    margin-right: 5px;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    background-color: #3c4badab;
+}
+
+::placeholder {
+    color: black;
+    padding-left: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+.con button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    align-items: center;
+    border: none;
+    background-color: #3c4cad;
+    color: black;
+}

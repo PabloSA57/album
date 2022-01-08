@@ -1,0 +1,49 @@
+.con{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+}
+
+.con .h{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.con .h img {
+    margin: 0;
+    padding: 0;
+}
+.con h2{
+    font-family: 'Lobster', cursive;
+    font-weight: lighter;
+    color: #f04393;
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0px;
+}
+
+.con button {
+    border: none;
+    border-radius: 10px;
+    width: 220px;
+    height: 35px;
+    background-color: #f04393;
+    color: aliceblue;
+    font-family: 'Lobster', cursive;
+    font-weight: lighter;
+    font-size: 15px
+}
+a{
+    text-decoration: none;
+}

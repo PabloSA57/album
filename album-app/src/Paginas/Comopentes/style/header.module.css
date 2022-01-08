@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    position: sticky;
+    top: 2px;
+}
+.nb{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    font-family: 'Lobster', cursive;
+    font-size: 14px;
+    align-items: center;    
+}
+
+.nb h2{
+    font-weight: lighter;
+    color: #f04393;
+}
+
+
+.nb button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f04393;
+}
+

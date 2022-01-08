@@ -1,0 +1,49 @@
+.con{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    border: 2px solid #f04393;
+    border-radius: 20px;
+    
+    background-size: 100%;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+    position: fixed;
+
+    top: 20%;
+    left: 9%;
+    z-index: 300;
+}
+
+.con input{
+    width: 80%;
+    margin-bottom: 10px;
+    height: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f04394b7;
+}
+
+.con h4 {
+    color: #f04393;
+    font-weight: lighter;
+    text-shadow: 5px 10px 1.5px #3c4bad;
+}
+
+
+
+.con button{
+    border-radius: 10px;
+    background-color: #f04393;
+    border: none;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 2px;
+}
+
+.con .btn .btnc{
+    background-color: #3c4bad;
+}

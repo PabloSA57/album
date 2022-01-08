@@ -1,0 +1,33 @@
+.con {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+}
+
+.con .user {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.con .user input{
+    width: 300px;
+    height: 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f0439486;
+}
+
+.con button {
+    width: 300px;
+    align-self: center;
+    height: 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f04393;
+}
