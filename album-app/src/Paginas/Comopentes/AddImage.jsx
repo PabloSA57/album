@@ -10,34 +10,39 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 
 export function Add(){
 
-   
+
     const dispatch = useDispatch();
     const photos = useSelector(state => state.photos)
-    const [name, setName] = useState('')
+    const [name, setName] = useState([])
+    const [env, setEnv] = useState(false)
+    const [sub, setSub] = useState(false)
 
     
     const sup = async (name) => {
-  
-        // List all the files in the "avatars" bucket
-        const { publicURL, error } = await supabase
+
+        for(let i = 0; i< name.length; i++){
+            const { publicURL, error } = await supabase
         .storage
-        .from('pau')
-        .getPublicUrl(name)
+        .from('pau') 
+        .getPublicUrl(name[i])
         
         if(publicURL){
             console.log('entra')
             const { data, error } = await supabase
             .from('album')
             .insert([
-        { name: name, url: publicURL }
-        ])
+        { name: name[i], url: publicURL }
+        ])  
+        
+            }
         }
-    }
-    
-    const arr = photos.flat()
 
-    console.log(arr)
-    const nameHandler = (e) => {
+}
+    
+    //const arr = photos.flat()
+
+    /*console.log(arr)*/
+    /*const nameHandler = (e) => {
         let name = e.target.value;
 
         for(let i =0; i < arr.length; i++){
@@ -47,28 +52,48 @@ export function Add(){
                 setName(name)
             }
         }
-    }
+    }*/
+
+    
     const archivoHandler =async (e) => {
-        const archivo = e.target.files[0];
-        console.log(archivo)
-        const { data, error } = await supabase
+        const archivo = e.target.files;
+        const arr = []
+        let con = 0;
+        for(let i = 0; i < archivo.length; i++){
+            const { data, error } = await supabase
         .storage
         .from('pau')
-        .upload(name, archivo, {
+        .upload(archivo[i].name, archivo[i], {
             cacheControl: '3600',
             upsert: false
             });
+            con += 1
+            arr.push(archivo[i].name)
 
             console.log(data)
+            console.log(name)
+        }   
+        
+        console.log(arr)
+        if(con === archivo.length){
+            setEnv(true)
+        }
+
+        setName(arr)
+            
+            
     }
 
+    //let time = name.length + "800"
+   
     const submitHandler = async (e) => {
         e.preventDefault();
-            sup(name)
-            console.log(name)
-
+        console.log(name)
+        setSub(true)
+            await sup(name)
+            
+            //console.log("timedd", parseInt(time))
             setTimeout(() => { window.location = '/home'}, 2000);
-           
     }
 
     const cancelarAdd = (e) => {
@@ -81,13 +106,15 @@ export function Add(){
         <div>
             <form onSubmit={submitHandler} className={ad.con}>
                 <h4>Paula Figueroa</h4>
-                <input type="text" name="name" id="" onChange={nameHandler} placeholder="Name"/>
-                <input type="file" name="" id="" onChange={archivoHandler}/>
+                <input type="file" name="" id="" onChange={archivoHandler} multiple/>
                 <div className={ad.btn}>
-                    <button type="submit">Subir</button>
+                    { env ? <button type="submit">{sub ? <div className={ad.spinner}></div>: "Subir"}</button> : ''}
                     <button 
                     className={ad.btnc}
-                    onClick={cancelarAdd}>Cancelar</button>
+                    onClick={cancelarAdd}
+                    >
+                    Cancelar
+                    </button>
                 </div>
                 
             </form>

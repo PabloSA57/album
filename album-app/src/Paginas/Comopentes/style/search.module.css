@@ -7,12 +7,12 @@
 }
 
 .con input{
-    height: 25px;
+    height: 30px;
     margin-right: 5px;
     border-radius: 10px;
     border: none;
     color: black;
-    background-color: #3c4badab;
+    background-color: #ad3c9aab;
 }
 
 ::placeholder {
@@ -27,6 +27,6 @@
     border-radius: 50%;
     align-items: center;
     border: none;
-    background-color: #3c4cad;
+    background-color: #c5179f;
     color: black;
 }

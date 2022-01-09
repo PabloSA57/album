@@ -47,3 +47,22 @@
 .con .btn .btnc{
     background-color: #3c4bad;
 }
+
+.spinner {
+    border: 4px solid rgba(255, 253, 253, 0.356);
+    border-left-color: transparent;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }

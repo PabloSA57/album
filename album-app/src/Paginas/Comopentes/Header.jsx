@@ -1,6 +1,5 @@
 import {HiUpload} from 'react-icons/hi';
 import hd from './style/header.module.css';
-import Search from './Search';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -36,7 +35,6 @@ export default function Header(){
             </div>
             
             </div>
-            <Search />
         </header>
     )
 }
