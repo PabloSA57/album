@@ -1,7 +1,6 @@
 import {HiUpload} from 'react-icons/hi';
 import hd from './style/header.module.css';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
+
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { addPhoto } from '../../action';
